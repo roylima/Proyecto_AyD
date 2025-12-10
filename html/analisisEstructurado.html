@@ -149,52 +149,21 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
-                        <div class="alert alert-light border-start border-4 border-warning shadow-sm">
-                            <h5 class="fw-bold text-dark"><i class="bi bi-list-ol me-2"></i>Flujo de Eventos del Sistema</h5>
-                            <p class="mb-0 text-muted">A continuación se detallan los estímulos externos e internos que activan los procesos del sistema:</p>
-                        </div>
-                        <ul class="list-group list-group-flush rounded shadow-sm">
-                            <li class="list-group-item">
-                                <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
-                                <strong>El Cliente realiza una solicitud de servicio.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-arrow-left-circle-fill text-primary me-2"></i>
-                                <strong>El Sistema envía la confirmación al Cliente.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
-                                <strong>El Personal envía una solicitud de registro.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-arrow-left-circle-fill text-primary me-2"></i>
-                                <strong>El Sistema entrega datos al Personal.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
-                                <strong>El Sistema registra la reserva.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
-                                <strong>El Sistema registra la venta.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
-                                <strong>El Sistema registra los productos.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-hdd-stack-fill text-secondary me-2"></i>
-                                <strong>El Sistema registra al personal.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-search text-warning me-2"></i>
-                                <strong>El Sistema consulta la información del cliente.</strong>
-                            </li>
-                            <li class="list-group-item">
-                                <i class="bi bi-search text-warning me-2"></i>
-                                <strong>El Sistema consulta la información del servicio.</strong>
-                            </li>
-                        </ul>
+
+                            <h5 class="fw-bold text-dark"><i class="bi bi-list-ol me-2"></i>Lista de Acontecimientos</h5>
+
+                        <ul>
+                            <li>El Cliente realiza una solicitud de servicio.</li>
+                            <li>El Sistema envía la confirmación al Cliente.</li>
+                            <li>El Personal envía una solicitud de registro.</li>
+                            <li>El Sistema entrega datos al Personal.</li>
+                            <li>El Sistema registra la reserva.</li>
+                            <li>El Sistema registra la venta.</li>
+                            <li>El Sistema registra los productos.</li>
+                            <li>El Sistema registra al personal.</li>
+                            <li>El Sistema consulta la información del cliente.</li>
+                            <li>El Sistema consulta la información del servicio.</li>
+                          </ul>
                     </div>
                 </div>
             </div>
@@ -225,11 +194,15 @@
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
                         <div class="text-center mb-4">
-                            <img src="../img/nivel2-1.png" alt="nivel2-1" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
-                            <img src="../img/nivel2-2.png" alt="nivel2-2" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
-                            <img src="../img/nivel2-3.png" alt="nivel2-3" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
-                            <img src="../img/nivel2-4.png" alt="nivel2-4" class="img-fluid rounded shadow-sm border mb-3" style="max-height: 400px;">
+                            <img src="../img/nivel2-1.png" alt="nivel2-1" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px;">
+                            <img src="../img/nivel2-2.png" alt="nivel2-2" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px;">
+                            <img src="../img/nivel2-3.png" alt="nivel2-3" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px;">
+                            <img src="../img/nivel2-4.png" alt="nivel2-4" class="img-fluid rounded shadow-sm border position-relative" style="max-height: 500px;">
+    
                         </div>
+                      
+     
+
                     </div>
                 </div>
             </div>
@@ -286,7 +259,7 @@
                     <div class="accordion-body bg-light">
                         <p class="mb-4">El <strong>Modelo Relacional</strong> representa la implementación lógica del diagrama E-R.</p>
                         <div class="p-4 bg-white border rounded shadow-sm">
-                            <h5 class="fw-bold mb-4 text-danger border-bottom pb-2">Esquema de Tablas</h5>
+                            <h5 class="fw-bold mb-4 text-danger border-bottom pb-2">Modelo Relacional</h5>
                             <ul class="list-unstyled" style="font-family: 'Consolas', 'Monaco', monospace; color: #333;">
                                 <li class="mb-2">• <strong>Personal</strong> (<span class="fw-bold">codPersonal</span>, nombre, ap_paterno, ap_materno, zona, nro, calle)</li>
                                 <li class="mb-2">• <strong>TelefPer</strong> (<span class="fw-bold">codTelf</span>, <span class="fw-bold">codPersonal</span>, telefono)</li>
@@ -313,12 +286,9 @@
                 <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionAnalisis">
                     <div class="accordion-body bg-light">
                         <div class="text-center mb-4">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#diccionarioModal" class="d-inline-block text-decoration-none" title="Clic para ampliar" style="cursor: zoom-in;">
                                 <img src="../img/DiccionarioDatos.drawio (1).png" alt="Diccionario de Datos" class="img-fluid rounded shadow-sm border position-relative" style="transition: transform 0.2s;">
-                            </a>
-                            <p class="text-muted small mt-2 fst-italic">
-                                <i class="bi bi-zoom-in me-1"></i> Haz clic en la imagen para verla en detalle
-                            </p>
+
+
                         </div>
                         <p>El <strong>Diccionario de Datos</strong> es un repositorio centralizado que describe en detalle cada elemento de dato que fluye por el sistema.</p>
                     </div>
@@ -393,19 +363,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="diccionarioModal" tabindex="-1" aria-labelledby="diccionarioModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen p-xl-5 p-md-3">
-            <div class="modal-content rounded-3 shadow overflow-hidden border-0">
-                <div class="modal-header bg-dark text-white py-2 border-0">
-                    <h5 class="modal-title fs-6" id="diccionarioModalLabel"><i class="bi bi-table me-2 text-warning"></i>Vista detallada: Diccionario de Datos</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-0 bg-light overflow-auto d-flex justify-content-center align-items-start">
-                    <img src="../img/DiccionarioDatos.drawio (1).png" class="img-fluid m-auto shadow-lg" alt="Diccionario Detallado" style="max-width: none; width: auto; min-width: 100%;">
-                </div>
-             </div>
-        </div>
-    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
