@@ -20,6 +20,7 @@ body {
     background-color: #f8f9fa;
     color: #333;
     overflow-x: hidden;
+    padding-top: 60px; /* Espacio para el navbar fijo */
 }
 
 /* -------------------------------------- */
@@ -130,7 +131,7 @@ body {
 }
 
 /* -------------------------------------- */
-/* 3. Carrusel - Animaciones */
+/* 3. Carrusel - Animaciones y Correcciones */
 /* -------------------------------------- */
 
 .carousel-container {
@@ -156,17 +157,49 @@ body {
 }
 
 .carousel-item-custom {
-    height: 400px;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    height: 500px; /* Ajustado a 500px según tu HTML original */
+    background-color: #333; 
     border: 3px solid #111111;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    text-align: center;
-    padding: 30px;
+    
+    /* Centrado y Fondo */
+    width: 90%;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
     position: relative;
     overflow: hidden;
+    
+    /* Flex para centrar la caja de texto vertical y horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+/* --- SOLUCIÓN DEL CLIC --- */
+/* Estilo de la caja flotante */
+.carousel-caption-box {
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    max-width: 70%;
+    text-align: center;
+    border-left: 5px solid #FFD700; 
+    
+    /* Esto habilita el clic en el botón */
+    position: relative; 
+    z-index: 10; 
+}
+
+/* Reducir el ancho de las zonas de clic de las flechas para que no estorben */
+.carousel-control-prev, .carousel-control-next {
+    width: 5%; 
+    z-index: 1;
+}
+/* ------------------------- */
 
 .carousel-item-custom::before {
     content: '';
@@ -179,10 +212,11 @@ body {
     transform: rotate(45deg);
     transition: all 0.6s ease;
     opacity: 0;
+    pointer-events: none; /* Asegura que el brillo no interfiera con los clics */
 }
 
 .carousel-item-custom:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-5px) scale(1.01);
     border-color: #FFD700;
     box-shadow: 0 25px 50px rgba(255, 215, 0, 0.2);
 }
@@ -197,26 +231,23 @@ body {
     100% { transform: rotate(45deg) translateX(100%); }
 }
 
-.carousel-item-custom h2 {
+/* Textos dentro del carrusel */
+.display-6 {
     font-family: 'Playfair Display', serif;
-    color: #efb643;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #FFD700; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
     margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
 }
 
-.carousel-item-custom h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: #FFD700;
-    border-radius: 2px;
+.lead {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
+/* Botones de navegación (Flechas) */
 .carousel-control-prev-icon, .carousel-control-next-icon {
     filter: invert(0);
     background-color: #FFD700;
@@ -226,21 +257,22 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.carousel-control-prev-icon:hover, .carousel-next-icon:hover {
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
     transform: scale(1.2);
     background-color: #CC0000;
     box-shadow: 0 8px 25px rgba(204, 0, 0, 0.4);
 }
 
 /* -------------------------------------- */
-/* 4. Footer - Animaciones (ACTUALIZADO) */
+/* 4. Footer - Animaciones */
 /* -------------------------------------- */
 
 .footer-custom {
-    background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%);
+    background: linear-gradient(135deg, #111111 0%, #0a0a0a 100%) !important;
     color: white;
     position: relative;
     overflow: hidden;
+    padding: 40px 0 10px 0;
 }
 
 .footer-custom::before {
@@ -265,6 +297,7 @@ body {
     border-top: 1px solid #333;
     box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.7);
     position: relative;
+    margin-bottom: 15px;
 }
 
 .footer-icons-bar::after {
@@ -285,40 +318,6 @@ body {
     position: relative;
 }
 
-
-.footer-icons-bar i:hover,
-.footer-link:hover i {
-    color: #ffffff;
-    transform: translateY(-8px) scale(1.3);
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
-}
-
-.footer-icons-bar i::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 2px;
-    background: #FFD700;
-    transition: width 0.4s ease;
-}
-
-.footer-icons-bar i:hover::after,
-.footer-link:hover i::after {
-    width: 100%;
-}
-
-.footer-icons-bar > div {
-    font-weight: 300;
-    transition: all 0.4s ease;
-}
-
-.footer-icons-bar > div:hover {
-    transform: translateX(10px); 
-}
-
 .footer-link {
     color: rgba(255, 255, 255, 0.85) !important; 
     text-decoration: none !important;
@@ -329,6 +328,13 @@ body {
 .footer-link:hover {
     color: #FFD700 !important; 
     text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.footer-link:hover i {
+    color: #ffffff;
+    transform: translateY(-8px) scale(1.3);
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
 }
 
 .text-muted {
@@ -341,6 +347,7 @@ body {
     color: #FFD700 !important;
     transform: scale(1.05);
 }
+
 /* -------------------------------------- */
 /* 5. Dropdown Hover para Desktop */
 /* -------------------------------------- */
@@ -420,26 +427,15 @@ body {
 }
 
 /* -------------------------------------- */
-/* 6. Efectos Globales*/
+/* 6. Efectos Globales */
 /* -------------------------------------- */
-
-/* Efecto de partículas doradas en hover */
-.gold-particle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #FFD700;
-    border-radius: 50%;
-    pointer-events: none;
-    opacity: 0;
-}
 
 /* Scroll suave */
 html {
     scroll-behavior: smooth;
 }
 
-/* Loading animation */
+/* Loading animation (Opcional si se usa) */
 .loading-spinner {
     width: 40px;
     height: 40px;
@@ -464,54 +460,52 @@ html {
     from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
     to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.6); }
 }
+
 /* -------------------------------------- */
-/* 7. Estilos del Acordeón ÑAK'UTAS (Negro/Dorado) */
+/* 7. Estilos del Acordeón ÑAK'UTAS */
 /* -------------------------------------- */
 
-/* Estilo del contenedor del item */
 .custom-accordion .accordion-item {
-    background-color: transparent; /* Fondo transparente para no tapar el body */
+    background-color: transparent; 
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 8px;
     overflow: hidden;
 }
 
-/* BOTÓN CERRADO (Estado normal) */
+/* BOTÓN CERRADO */
 .custom-accordion .accordion-button.collapsed {
-    background-color: #111111; /* Negro corporativo */
-    color: #ffffff;            /* Texto blanco */
-    border-bottom: 2px solid #FFD700; /* Línea dorada sutil abajo */
+    background-color: #111111; 
+    color: #ffffff;            
+    border-bottom: 2px solid #FFD700; 
     transition: all 0.3s ease;
 }
 
-/* BOTÓN ABIERTO (Estado activo) */
+/* BOTÓN ABIERTO */
 .custom-accordion .accordion-button:not(.collapsed) {
-    background-color: #FFD700; /* Dorado corporativo al abrirse */
-    color: #111111;            /* Texto negro para contraste */
-    box-shadow: none;          /* Quitar borde azul default de bootstrap */
-    font-weight: 800;          /* Texto más grueso */
+    background-color: #FFD700; 
+    color: #111111;            
+    box-shadow: none;          
+    font-weight: 800;          
     border-bottom: none;
 }
 
 /* Icono de la flecha (Chevron) */
-/* Cuando está cerrado (fondo negro), flecha blanca */
 .custom-accordion .accordion-button.collapsed::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
-/* Cuando está abierto (fondo dorado), flecha negra */
 .custom-accordion .accordion-button:not(.collapsed)::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23111111'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
 }
 
-/* Hover (pasar el mouse por encima cuando está cerrado) */
+/* Hover */
 .custom-accordion .accordion-button.collapsed:hover {
     background-color: #1a1a1a;
-    color: #FFD700; /* El texto se vuelve dorado */
-    padding-left: 25px; /* Animación de desplazamiento */
+    color: #FFD700; 
+    padding-left: 25px; 
 }
 
 /* Cuerpo del contenido */
 .custom-accordion .accordion-body {
-    border-top: 4px solid #CC0000; /* Línea roja de acento al abrir */
+    border-top: 4px solid #CC0000; 
     background-color: #ffffff;
 }
