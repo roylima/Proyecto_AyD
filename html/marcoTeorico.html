@@ -10,35 +10,16 @@
     <link rel="stylesheet" href="../css/styles.css">
     
     <style>
-        /* Estilos específicos para la página (manteniendo la coherencia del diseño oscuro) */
+        /* Estilos específicos para la página */
         body {
-            background-color: #f8f9fa; /* Fondo general muy claro */
-            padding-top: 60px; /* Espacio para el navbar fijo */
+            background-color: #f8f9fa;
+            padding-top: 60px;
         }
         
-        /* Aseguramos que los estilos HOVER del dropdown sigan funcionando */
-        @media (min-width: 992px) {
-            .navbar .dropdown:hover .dropdown-menu {
-                display: block;
-                margin-top: 0; 
-                border-radius: 0;
-                background-color: #212529;
-                border: none;
-            }
-            .navbar .dropdown-item {
-                color: rgba(255, 255, 255, 0.75);
-            }
-            .navbar .dropdown-item:hover {
-                color: white;
-                background-color: #343a40; 
-            }
-            .dropdown-toggle::after {
-                display: none; 
-            }
-        }
-        
-        /* Estilos del Footer y Navbar que deben estar en styles.css o aquí */
+        /* Ajustes del Navbar para esta página */
         .navbar-custom { background-color: #212529 !important; border-bottom: none; }
+        
+        /* Ajustes del Footer */
         .footer-custom { background-color: #343a40 !important; color: white; padding: 40px 0 10px 0; }
         .footer-icons-bar { background-color: #212529; padding: 20px 0; margin-bottom: 15px; }
 
@@ -48,6 +29,23 @@
             line-height: 1.8;
             color: #333;
         }
+
+        /* Estilos para las listas de metodología */
+        .methodology-list li {
+            margin-bottom: 8px;
+        }
+        
+        /* Enlaces del Footer */
+        .footer-link {
+            color: rgba(255, 255, 255, 0.85) !important;
+            text-decoration: none !important;
+            transition: all 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #FFD700 !important;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
@@ -55,7 +53,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" id="main-navbar">
             <div class="container">
-                <a class="navbar-brand logo-font" href="inicio.html">
+                <a class="navbar-brand logo-font" href="index.html">
                     <span class="fs-4 logo-text">ÑAK'UTAS</span>
                     <span class="d-block logo-subtitle">Cabello Sano</span>
                 </a>
@@ -66,7 +64,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="inicio.html">Inicio</a>
+                            <a class="nav-link" href="index.html">Inicio</a>
                         </li>
                         
                         <li class="nav-item dropdown">
@@ -74,8 +72,8 @@
                                 Análisis Estructurado
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
-                                <li><a class="dropdown-item" href="modeloAmbiental.html">Modelo Ambiental</a></li>
-                                <li><a class="dropdown-item" href="modeloComportamiento.html">Modelo Comportamiento</a></li>
+                                <li><a class="dropdown-item" href="analisisEstructurado.html#modeloAmbiental">Modelo Ambiental</a></li>
+                                <li><a class="dropdown-item" href="analisisEstructurado.html#modeloComportamiento">Modelo Comportamiento</a></li>
                             </ul>
                         </li>
                         
@@ -114,13 +112,13 @@
                     </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush list-unstyled">
-                            <li><a href="#antecedentes" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Antecedentes</a></li>
-                            <li><a href="#planteamiento" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Planteamiento del problema</a></li>
-                            <li><a href="#arbol" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Árbol de problemas</a></li>
-                            <li><a href="#formulacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Formulación del problema</a></li>
-                            <li><a href="#proposito" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Propósito del estudio</a></li>
-                            <li><a href="#metodologia" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Metodología</a></li>
-                            <li><a href="#planificacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> Planificación de las Actividades</a></li>
+                            <li><a href="#antecedentes" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.1 Antecedentes</a></li>
+                            <li><a href="#planteamiento" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.2 Planteamiento del problema</a></li>
+                            <li><a href="#arbol" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.3 Árbol de problemas</a></li>
+                            <li><a href="#formulacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.4 Formulación del problema</a></li>
+                            <li><a href="#proposito" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.5 Propósito del estudio</a></li>
+                            <li><a href="#metodologia" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.6 Metodología</a></li>
+                            <li><a href="#planificacion" class="text-decoration-none text-dark d-block py-1"><i class="bi bi-caret-right-fill text-danger me-1"></i> 3.7 Planificación de las Actividades</a></li>
                         </ul>
                     </div>
                 </div>
@@ -203,25 +201,148 @@
 
                 <section id="proposito" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.5 Propósito del estudio</h3>
-                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
-                        <i class="bi bi-pencil-square fs-3 mb-2 d-block"></i>
-                        <em>Sección pendiente de desarrollo.</em>
+                    <div class="academic-text">
+                        <p>
+                            El propósito del presente estudio es analizar la situación actual del salón de belleza, identificar sus principales dificultades administrativas y proponer una solución tecnológica que permita optimizar los procesos internos del negocio. A través del desarrollo de un sistema web, se busca mejorar la gestión de reservas, el control del inventario, la organización del personal y el registro de ventas y servicios.
+                        </p>
+                        <p>
+                            Este estudio pretende demostrar que la implementación de un sistema digital contribuye significativamente a la eficiencia operativa del salón, reduciendo errores comunes como la duplicación de citas, la pérdida de información o la falta de control sobre los productos. Asimismo, este proyecto tiene como finalidad establecer una base metodológica y técnica que sirva de referencia para futuras mejoras o ampliaciones del sistema, asegurando que el salón cuente con herramientas modernas y alineadas a sus necesidades reales.
+                        </p>
                     </div>
                 </section>
 
+                <hr class="my-5 border-secondary opacity-25">
+
                 <section id="metodologia" class="mb-5">
-                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.6 Metodología</h3>
-                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
-                        <i class="bi bi-pencil-square fs-3 mb-2 d-block"></i>
-                        <em>Sección pendiente de desarrollo.</em>
+                    <h3 class="fw-bold mb-3" style="color: #CC0000;">3.6 Metodología (IDI – Investigación, Diseño e Implementación)</h3>
+                    <div class="academic-text">
+                        <p class="mb-4">
+                            Para el desarrollo del proyecto se aplicó la metodología <strong>IDI (Investigación – Diseño – Implementación)</strong>, un enfoque flexible y adecuado para proyectos de desarrollo web que requieren un análisis previo de la realidad, una planificación estructurada y una ejecución técnica basada en resultados. Esta metodología permite trabajar de manera ordenada sin necesidad de procesos de capacitación formal, lo que se ajusta a los objetivos del presente informe.
+                        </p>
+
+                        <div class="card mb-3 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="fw-bold text-dark mb-3">1. Fase de Investigación</h5>
+                                <p>En esta etapa se realizó un levantamiento de información sobre el funcionamiento del salón. Se analizaron los métodos actuales de registro de citas, administración de productos y organización del personal. Las actividades principales incluyeron:</p>
+                                <ul class="methodology-list">
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Observación directa del trabajo diario.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Identificación de problemas administrativos.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Determinación de necesidades reales del negocio.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Revisión de documentos, agendas y procesos internos.</li>
+                                </ul>
+                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Comprender la situación actual para definir una solución acorde a los requerimientos del salón.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="fw-bold text-dark mb-3">2. Fase de Diseño</h5>
+                                <p>Una vez recopilada la información, se procedió a estructurar el diseño del sistema. Las actividades más relevantes fueron:</p>
+                                <ul class="methodology-list">
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Formulación de requerimientos funcionales y no funcionales.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Diseño del modelo entidad–relación y normalización de la base de datos.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Elaboración de diagramas UML (casos de uso, procesos y estructura).</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Diseño de la interfaz gráfica (UI/UX) del sitio web.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Planificación de módulos y estructura de navegación.</li>
+                                </ul>
+                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Obtener una representación clara y detallada de cómo debía funcionar el sistema antes de ser construido.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="fw-bold text-dark mb-3">3. Fase de Implementación</h5>
+                                <p>En esta etapa se desarrolló técnicamente el sistema web utilizando las herramientas seleccionadas. Las tareas principales fueron:</p>
+                                <ul class="methodology-list">
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Programación del frontend con HTML, CSS, Bootstrap, Google Fonts y JavaScript.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Construcción y configuración de la base de datos.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Integración completa de los módulos de reservas, ventas, inventario y administración.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Pruebas internas de funcionamiento y corrección de errores.</li>
+                                </ul>
+                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Lograr un sistema web funcional y alineado a los objetivos iniciales.</p>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 border-0 shadow-sm">
+                            <div class="card-body">
+                                <h5 class="fw-bold text-dark mb-3">4. Fase de Evaluación</h5>
+                                <p>Finalmente, se efectuaron revisiones de funcionamiento, pruebas de estabilidad y verificación del cumplimiento de cada requerimiento del sistema. Se corrigieron inconsistencias menores y se validó la versión final del software.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
+
+                <hr class="my-5 border-secondary opacity-25">
 
                 <section id="planificacion" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.7 Planificación de las Actividades</h3>
-                    <div class="p-4 bg-white border rounded shadow-sm text-center text-muted">
-                        <i class="bi bi-calendar-event fs-3 mb-2 d-block"></i>
-                        <em>Sección pendiente de desarrollo.</em>
+                    <div class="academic-text">
+                        <p class="mb-4">La planificación del proyecto se organizó en etapas secuenciales que permitieron controlar el avance y garantizar la coherencia del desarrollo. A continuación, se presenta la planificación general:</p>
+                        
+                        <div class="list-group">
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 fw-bold text-danger">Etapa 1: Recolección de Información (Investigación)</h5>
+                                </div>
+                                <ul class="mb-1 mt-2 ">
+                                    <li>Visita al salón y observación del flujo de trabajo.</li>
+                                    <li>Identificación de problemas en reservas, inventario y atención al cliente.</li>
+                                    <li>Registro de métodos actuales utilizados por el personal.</li>
+                                    <li>Análisis preliminar de necesidades y requisitos.</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 fw-bold text-danger">Etapa 2: Análisis y Definición de Requerimientos</h5>
+                                </div>
+                                <ul class="mb-1 mt-2 ">
+                                    <li>Clasificación de información obtenida.</li>
+                                    <li>Redacción del planteamiento del problema.</li>
+                                    <li>Identificación de objetivos generales y específicos.</li>
+                                    <li>Elaboración de requerimientos del sistema.</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 fw-bold text-danger">Etapa 3: Diseño del Sistema</h5>
+                                </div>
+                                <ul class="mb-1 mt-2 ">
+                                    <li>Creación del modelo entidad–relación.</li>
+                                    <li>Normalización de tablas.</li>
+                                    <li>Diseño de diagramas UML.</li>
+                                    <li>Diseño de la interfaz del sistema (UI/UX).</li>
+                                    <li>Planificación de módulos y estructura del sitio web.</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 fw-bold text-danger">Etapa 4: Desarrollo e Implementación</h5>
+                                </div>
+                                <ul class="mb-1 mt-2 ">
+                                    <li>Construcción de la base de datos.</li>
+                                    <li>Programación del frontend.</li>
+                                    <li>Integración de módulos del sistema.</li>
+                                    <li>Pruebas internas y correcciones.</li>
+                                </ul>
+                            </div>
+
+                            <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h5 class="mb-1 fw-bold text-danger">Etapa 5: Evaluación Final</h5>
+                                </div>
+                                <ul class="mb-1 mt-2 ">
+                                    <li>Verificación del funcionamiento completo.</li>
+                                    <li>Pruebas de rendimiento básicas.</li>
+                                    <li>Ajustes finales del sistema web.</li>
+                                    <li>Preparación del informe escrito.</li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </section>
 
@@ -253,8 +374,9 @@
                 </div>
 
             </div>
-            <p class="mb-1 text-muted mt-4">&copy; 2025. Todos los derechos reservados.</p>
+            <p class="mb-1 text-muted mt-4">© 2025. Todos los derechos reservados.</p>
         </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
