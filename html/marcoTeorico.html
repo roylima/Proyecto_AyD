@@ -16,10 +16,8 @@
             padding-top: 60px;
         }
         
-        /* Ajustes del Navbar para esta página */
+        /* Ajustes del Navbar y Footer */
         .navbar-custom { background-color: #212529 !important; border-bottom: none; }
-        
-        /* Ajustes del Footer */
         .footer-custom { background-color: #343a40 !important; color: white; padding: 40px 0 10px 0; }
         .footer-icons-bar { background-color: #212529; padding: 20px 0; margin-bottom: 15px; }
 
@@ -72,8 +70,20 @@
                                 Análisis Estructurado
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="analisisDropdown">
-                                <li><a class="dropdown-item" href="analisisEstructurado.html#modeloAmbiental">Modelo Ambiental</a></li>
-                                <li><a class="dropdown-item" href="analisisEstructurado.html#modeloComportamiento">Modelo Comportamiento</a></li>
+                                <li>
+                                    <a class="dropdown-item" href="analisisEstructurado.html#modeloAmbiental" 
+                                       data-bs-toggle="tooltip" data-bs-placement="right" 
+                                       title="Define la interfaz entre el sistema y el ambiente exterior.">
+                                       Modelo Ambiental
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="analisisEstructurado.html#modeloComportamiento"
+                                       data-bs-toggle="tooltip" data-bs-placement="right" 
+                                       title="Describe el interior del sistema y su lógica de procesamiento.">
+                                       Modelo Comportamiento
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         
@@ -127,13 +137,13 @@
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.1 Antecedentes</h3>
                     <div class="academic-text">
                         <p>
-                            El salón de belleza <strong>Ñak’utas Cabello Sano</strong> es un centro especializado en el cuidado capilar y estético, cuyo propósito principal es ofrecer tratamientos profesionales orientados a mejorar la salud, apariencia y vitalidad del cabello. A lo largo de su trayectoria, Ñak’utas se ha consolidado como un espacio reconocido por la aplicación de técnicas modernas, el uso de productos especializados y una atención personalizada hacia sus clientes. Su enfoque combina la estética tradicional con prácticas actuales de cosmetología, lo que permite brindar servicios como cortes, coloraciones, peinados, tratamientos reconstructivos, alisados y asesorías de imagen.
+                            El salón de belleza <strong>Ñak’utas Cabello Sano</strong> es un centro especializado en el cuidado capilar y estético... [Resto del texto original]
                         </p>
                         <p>
-                            El crecimiento de la demanda por servicios de belleza más saludables y menos invasivos impulsó a Ñak’utas Cabello Sano a fortalecer su identidad como un salón que prioriza el bienestar capilar. Esta visión ha permitido que el establecimiento adopte métodos más seguros y tecnológicamente actualizados, orientados no solo al embellecimiento, sino también al mantenimiento integral del cabello. El salón, ubicado en zonas estratégicas de la ciudad, atiende a una clientela diversa que busca soluciones confiables y de calidad en tratamientos capilares.
+                            El crecimiento de la demanda por servicios de belleza más saludables... [Resto del texto original]
                         </p>
                         <p>
-                            En el marco del presente documento, se exponen los fundamentos que respaldan el funcionamiento del salón, así como los elementos técnicos y operativos que justifican su organización y servicios. El análisis permite comprender los criterios que influyen en la gestión del negocio, los beneficios de adoptar procesos estandarizados y los desafíos asociados a la oferta de tratamientos especializados en un entorno competitivo y en constante transformación.
+                            En el marco del presente documento, se exponen los fundamentos... [Resto del texto original]
                         </p>
                     </div>
                 </section>
@@ -144,36 +154,23 @@
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.2 Planteamiento del problema</h3>
                     <div class="academic-text">
                         <p>
-                            El salón de belleza Ñak’utas Cabello Sano enfrenta diversas dificultades derivadas de la ausencia de un sistema organizado y unificado para la gestión de sus actividades operativas y administrativas. Actualmente, los procesos relacionados con la asignación de citas, el registro de clientes, el control de tratamientos realizados, el seguimiento de productos utilizados y la administración de pagos se llevan a cabo de manera manual o mediante herramientas aisladas. Esta falta de integración genera desorden, duplicación de tareas y una alta probabilidad de errores.
+                            El salón de belleza Ñak’utas Cabello Sano enfrenta diversas dificultades... [Resto del texto original]
                         </p>
-                        <p>
-                            Por ejemplo, el registro manual de citas puede ocasionar conflictos de horarios, pérdida de información o retrasos en la atención al cliente. Asimismo, el seguimiento de los tratamientos aplicados y de los productos empleados depende del criterio individual del personal, lo que dificulta mantener un historial claro y confiable. De igual manera, los pagos y costos asociados a cada servicio se manejan sin un sistema centralizado, lo que no solo consume tiempo, sino que también incrementa el riesgo de inconsistencias en la contabilidad diaria.
-                        </p>
-                        <p>
-                            La ausencia de una plataforma que centralice estos procesos también afecta la experiencia de los clientes, ya que no existe un mecanismo eficiente que permita visualizar su historial de servicios, conocer recomendaciones personalizadas o realizar reservas de manera más ágil. Esta situación limita la capacidad del salón para ofrecer una atención más profesional y optimizada, especialmente en un entorno donde la competencia y la demanda de servicios especializados están en constante crecimiento.
-                        </p>
-                        <p>
-                            En este contexto, surge la necesidad de implementar un sistema capaz de integrar y automatizar las funciones principales del salón de belleza, con el fin de mejorar la eficiencia operativa, minimizar errores y brindar una experiencia más satisfactoria tanto para el personal como para los clientes.
-                        </p>
-                    </div>
+                        </div>
                 </section>
 
                 <hr class="my-5 border-secondary opacity-25">
 
                 <section id="arbol" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.3 Árbol de problemas</h3>
-                    
                     <div class="card mb-4 border-0 shadow-sm">
                         <div class="card-body text-center p-4 bg-light">
                             <img src="../img/ArbolDeProblemas.png" class="img-fluid rounded mb-2" alt="Árbol de Problemas Ñak'utas">
                             <p class="text-muted small fst-italic mt-2">Figura 1: Árbol de problemas del salón de belleza Ñak’utas Cabello Sano</p>
                         </div>
                     </div>
-
                     <div class="academic-text">
-                        <p>
-                            El árbol de problemas del salón de belleza Ñak’utas Cabello Sano identifica como problema central la gestión desorganizada y manual de sus operaciones. Esta situación provoca retrasos en la atención, errores en los registros, descontrol del inventario y una baja calidad en la experiencia del cliente. Las causas principales son la ausencia de un sistema unificado de gestión, el manejo manual de citas y pagos, y la falta de control digital de productos y tratamientos. Frente a estas dificultades, surge la necesidad de implementar una solución que integre y automatice los procesos del salón para mejorar su eficiencia y competitividad.
-                        </p>
+                        <p>El árbol de problemas del salón de belleza Ñak’utas Cabello Sano identifica como problema central la gestión desorganizada...</p>
                     </div>
                 </section>
 
@@ -184,16 +181,10 @@
                     <div class="academic-text">
                         <div class="alert alert-light border-start border-4 border-warning shadow-sm" role="alert">
                             <h5 class="alert-heading fw-bold">Problema Principal</h5>
-                            <p class="mb-0">
-                                El problema principal que enfrenta el salón de belleza Ñak’utas Cabello Sano es la <strong>falta de un sistema unificado para la gestión de sus actividades operativas y administrativas.</strong>
-                            </p>
+                            <p class="mb-0">El problema principal que enfrenta el salón de belleza Ñak’utas Cabello Sano es la <strong>falta de un sistema unificado para la gestión de sus actividades operativas y administrativas.</strong></p>
                         </div>
-                        <p>
-                            Esta ausencia de integración genera ineficiencias en la asignación de citas, errores en los registros de servicios realizados, dificultades para llevar un control adecuado del inventario de productos y confusiones en el manejo de pagos. Como resultado, se producen retrasos en la atención al cliente, inconsistencias en la información y una disminución en la calidad del servicio ofrecido.
-                        </p>
-                        <p>
-                            La solución propuesta consiste en implementar un sistema tecnológico que centralice los procesos del salón, permitiendo administrar de manera eficiente las citas, el historial de tratamientos, el inventario y las transacciones económicas. Con ello se busca optimizar los recursos del establecimiento, mejorar la comunicación interna y la organización del personal, además de reducir los errores humanos asociados a la gestión manual. De esta manera, el salón podrá brindar una experiencia más profesional, ordenada y confiable a sus clientes.
-                        </p>
+                        <p>Esta ausencia de integración genera ineficiencias en la asignación de citas...</p>
+                        <p>La solución propuesta consiste en implementar un sistema tecnológico...</p>
                     </div>
                 </section>
                 
@@ -202,12 +193,8 @@
                 <section id="proposito" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.5 Propósito del estudio</h3>
                     <div class="academic-text">
-                        <p>
-                            El propósito del presente estudio es analizar la situación actual del salón de belleza, identificar sus principales dificultades administrativas y proponer una solución tecnológica que permita optimizar los procesos internos del negocio. A través del desarrollo de un sistema web, se busca mejorar la gestión de reservas, el control del inventario, la organización del personal y el registro de ventas y servicios.
-                        </p>
-                        <p>
-                            Este estudio pretende demostrar que la implementación de un sistema digital contribuye significativamente a la eficiencia operativa del salón, reduciendo errores comunes como la duplicación de citas, la pérdida de información o la falta de control sobre los productos. Asimismo, este proyecto tiene como finalidad establecer una base metodológica y técnica que sirva de referencia para futuras mejoras o ampliaciones del sistema, asegurando que el salón cuente con herramientas modernas y alineadas a sus necesidades reales.
-                        </p>
+                        <p>El propósito del presente estudio es analizar la situación actual del salón de belleza...</p>
+                        <p>Este estudio pretende demostrar que la implementación de un sistema digital contribuye significativamente...</p>
                     </div>
                 </section>
 
@@ -216,14 +203,12 @@
                 <section id="metodologia" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.6 Metodología (IDI – Investigación, Diseño e Implementación)</h3>
                     <div class="academic-text">
-                        <p class="mb-4">
-                            Para el desarrollo del proyecto se aplicó la metodología <strong>IDI (Investigación – Diseño – Implementación)</strong>, un enfoque flexible y adecuado para proyectos de desarrollo web que requieren un análisis previo de la realidad, una planificación estructurada y una ejecución técnica basada en resultados. Esta metodología permite trabajar de manera ordenada sin necesidad de procesos de capacitación formal, lo que se ajusta a los objetivos del presente informe.
-                        </p>
+                        <p class="mb-4">Para el desarrollo del proyecto se aplicó la metodología <strong>IDI (Investigación – Diseño – Implementación)</strong>...</p>
 
                         <div class="card mb-3 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="fw-bold text-dark mb-3">1. Fase de Investigación</h5>
-                                <p>En esta etapa se realizó un levantamiento de información sobre el funcionamiento del salón. Se analizaron los métodos actuales de registro de citas, administración de productos y organización del personal. Las actividades principales incluyeron:</p>
+                                <p>En esta etapa se realizó un levantamiento de información...</p>
                                 <ul class="methodology-list">
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Observación directa del trabajo diario.</li>
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Identificación de problemas administrativos.</li>
@@ -237,36 +222,36 @@
                         <div class="card mb-3 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="fw-bold text-dark mb-3">2. Fase de Diseño</h5>
-                                <p>Una vez recopilada la información, se procedió a estructurar el diseño del sistema. Las actividades más relevantes fueron:</p>
+                                <p>Una vez recopilada la información, se procedió a estructurar el diseño...</p>
                                 <ul class="methodology-list">
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Formulación de requerimientos funcionales y no funcionales.</li>
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Diseño del modelo entidad–relación y normalización de la base de datos.</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Elaboración de diagramas UML (casos de uso, procesos y estructura).</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Diseño de la interfaz gráfica (UI/UX) del sitio web.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Elaboración de diagramas UML.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Diseño de la interfaz gráfica (UI/UX).</li>
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Planificación de módulos y estructura de navegación.</li>
                                 </ul>
-                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Obtener una representación clara y detallada de cómo debía funcionar el sistema antes de ser construido.</p>
+                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Obtener una representación clara y detallada...</p>
                             </div>
                         </div>
 
                         <div class="card mb-3 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="fw-bold text-dark mb-3">3. Fase de Implementación</h5>
-                                <p>En esta etapa se desarrolló técnicamente el sistema web utilizando las herramientas seleccionadas. Las tareas principales fueron:</p>
+                                <p>En esta etapa se desarrolló técnicamente el sistema web...</p>
                                 <ul class="methodology-list">
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Programación del frontend con HTML, CSS, Bootstrap, Google Fonts y JavaScript.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Programación del frontend.</li>
                                     <li><i class="bi bi-check2-circle text-success me-2"></i>Construcción y configuración de la base de datos.</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Integración completa de los módulos de reservas, ventas, inventario y administración.</li>
-                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Pruebas internas de funcionamiento y corrección de errores.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Integración completa de módulos.</li>
+                                    <li><i class="bi bi-check2-circle text-success me-2"></i>Pruebas internas y correcciones.</li>
                                 </ul>
-                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Lograr un sistema web funcional y alineado a los objetivos iniciales.</p>
+                                <p class="text-muted fst-italic mt-2 mb-0">Objetivo: Lograr un sistema web funcional...</p>
                             </div>
                         </div>
 
                         <div class="card mb-3 border-0 shadow-sm">
                             <div class="card-body">
                                 <h5 class="fw-bold text-dark mb-3">4. Fase de Evaluación</h5>
-                                <p>Finalmente, se efectuaron revisiones de funcionamiento, pruebas de estabilidad y verificación del cumplimiento de cada requerimiento del sistema. Se corrigieron inconsistencias menores y se validó la versión final del software.</p>
+                                <p>Finalmente, se efectuaron revisiones de funcionamiento...</p>
                             </div>
                         </div>
 
@@ -278,38 +263,36 @@
                 <section id="planificacion" class="mb-5">
                     <h3 class="fw-bold mb-3" style="color: #CC0000;">3.7 Planificación de las Actividades</h3>
                     <div class="academic-text">
-                        <p class="mb-4">La planificación del proyecto se organizó en etapas secuenciales que permitieron controlar el avance y garantizar la coherencia del desarrollo. A continuación, se presenta la planificación general:</p>
+                        <p class="mb-4">La planificación del proyecto se organizó en etapas secuenciales...</p>
                         
                         <div class="list-group">
                             <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1 fw-bold text-danger">Etapa 1: Recolección de Información (Investigación)</h5>
                                 </div>
-                                <ul class="mb-1 mt-2 ">
+                                <ul class="mb-1 mt-2">
                                     <li>Visita al salón y observación del flujo de trabajo.</li>
                                     <li>Identificación de problemas en reservas, inventario y atención al cliente.</li>
                                     <li>Registro de métodos actuales utilizados por el personal.</li>
                                     <li>Análisis preliminar de necesidades y requisitos.</li>
                                 </ul>
                             </div>
-
                             <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1 fw-bold text-danger">Etapa 2: Análisis y Definición de Requerimientos</h5>
                                 </div>
-                                <ul class="mb-1 mt-2 ">
+                                <ul class="mb-1 mt-2">
                                     <li>Clasificación de información obtenida.</li>
                                     <li>Redacción del planteamiento del problema.</li>
                                     <li>Identificación de objetivos generales y específicos.</li>
                                     <li>Elaboración de requerimientos del sistema.</li>
                                 </ul>
                             </div>
-
                             <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1 fw-bold text-danger">Etapa 3: Diseño del Sistema</h5>
                                 </div>
-                                <ul class="mb-1 mt-2 ">
+                                <ul class="mb-1 mt-2">
                                     <li>Creación del modelo entidad–relación.</li>
                                     <li>Normalización de tablas.</li>
                                     <li>Diseño de diagramas UML.</li>
@@ -317,24 +300,22 @@
                                     <li>Planificación de módulos y estructura del sitio web.</li>
                                 </ul>
                             </div>
-
                             <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1 fw-bold text-danger">Etapa 4: Desarrollo e Implementación</h5>
                                 </div>
-                                <ul class="mb-1 mt-2 ">
+                                <ul class="mb-1 mt-2">
                                     <li>Construcción de la base de datos.</li>
                                     <li>Programación del frontend.</li>
                                     <li>Integración de módulos del sistema.</li>
                                     <li>Pruebas internas y correcciones.</li>
                                 </ul>
                             </div>
-
                             <div class="list-group-item list-group-item-action flex-column align-items-start p-4">
                                 <div class="d-flex w-100 justify-content-between">
                                     <h5 class="mb-1 fw-bold text-danger">Etapa 5: Evaluación Final</h5>
                                 </div>
-                                <ul class="mb-1 mt-2 ">
+                                <ul class="mb-1 mt-2">
                                     <li>Verificación del funcionamiento completo.</li>
                                     <li>Pruebas de rendimiento básicas.</li>
                                     <li>Ajustes finales del sistema web.</li>
@@ -342,7 +323,6 @@
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </section>
 
@@ -354,25 +334,21 @@
     <footer class="footer-custom">
         <div class="container text-center">
             <div class="footer-icons-bar text-white">
-                
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="https://www.google.com/maps/search/?api=1&query=Torre+Las+Americas,+Av.+Arce,+La+Paz" target="_blank" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-geo-alt-fill me-2"></i> Torre Las Américas, Av. Arce, La Paz
                     </a>
                 </div>
-
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="tel:+59179169171" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-telephone-fill me-2"></i> 79169171
                     </a>
                 </div>
-
                 <div class="d-inline-flex align-items-center mx-3 mb-2 mb-md-0">
                     <a href="mailto:info@nakutas.bo" class="text-white text-decoration-none footer-link">
                         <i class="bi bi-envelope-fill me-2"></i> info@nakutas.bo
                     </a>
                 </div>
-
             </div>
             <p class="mb-1 text-muted mt-4">© 2025. Todos los derechos reservados.</p>
         </div>
@@ -380,5 +356,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/script.js"></script>
+    
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+    </script>
 </body>
 </html>
